@@ -1,4 +1,5 @@
 .vscode/
+.idea/*
 libtcodpy/__init__.pyc
 libtcodpy/__pycache__/__init__.cpython-36.pyc
 __pycache__/input_handlers.cpython-36.pyc
