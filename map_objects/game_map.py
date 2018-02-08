@@ -1,5 +1,6 @@
 import libtcodpy as libtcod
 from components.item import Item
+from item_functions import heal
 from map_objects.tile import Tile
 from map_objects.rectangle import Rect
 from random import randint
@@ -128,6 +129,6 @@ class GameMap:
             y = randint(room.y1 + 1, room.y2 - 1)
 
             if not any([entity for entity in entities if entity.x == x and entity.y == y]):
-                item_component = Item()
+                item_component = Item(use_function=heal, amount=4)
                 item = Entity(x, y, '!', libtcod.violet, 'Healing Potion', render_order=RenderOrder.ITEM, item=item_component)
                 entities.append(item)
